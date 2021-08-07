@@ -1,12 +1,17 @@
-function Card(){
+function Card(props){
+// function Card({title,body}){
+    }
+    console.log(props)
     return(
         <div className="card">
             <header className="header">
-                <h2>Header</h2>
+                <h2>{props.title}</h2>
+                {/*<h2>{title}</h2>*/}
             </header>
 
             <section className="card-body">
-                <p>Loremmmmmmmmmmmmmmm</p>
+                <p>{props.body}</p>
+                {/*<p>{body}</p>*/}
             </section>
 
             <footer className="footer">

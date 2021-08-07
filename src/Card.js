@@ -2,7 +2,6 @@
 function Card(props){
 // function Card({title,body}){
 
-    console.log(props)
     return(
         <div className="card">
             <header className="header">

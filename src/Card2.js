@@ -2,7 +2,7 @@ import React from "react";
 // import React, component from "react";
 class Card2 extends React.Component{
 // class Card2 extends Component{
-    render(props) {
+    render() {
         // let {title,body}=this.props
         return(
             <div className="card">

@@ -5,6 +5,7 @@ import App from './App';
 import Card from './Card'
 import reportWebVitals from './reportWebVitals';
 import Event from "./Event";
+import Card2 from "./Card2";
 
 ReactDOM.render(<App/>, document.getElementById('root')
 );

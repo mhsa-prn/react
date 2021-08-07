@@ -10,26 +10,42 @@ class App extends React.Component{
             {title:'title2' , body:'this is title2'}
         ]}
 
-    constructor() {
-        super();
-        setTimeout(()=>
-            {
-                this.setState({articles:[
-                        {title:'title3' , body:'this is title3'},
-                        {title:'title4' , body:'this is title4'}
-                    ]})
-            }
-        ,2000)
+    // constructor() {
+    //     super();
+    //     setTimeout(()=>
+    //         {
+    //             this.setState({articles:[
+    //                     {title:'title3' , body:'this is title3'},
+    //                     {title:'title4' , body:'this is title4'}
+    //                 ]})
+    //         }
+    //     ,2000)
+    // }
+
+    loadMore = ()=>{
+        let articles = [
+                {title:'title3', body:'this is title3'},
+                {title:'title4', body:'this is title4'}
+            ]
+
+       this.setState(prevState=>{
+           return {
+               articles : [...prevState.articles , ...articles]
+           }
+       })
+
     }
+
 
     render() {
         return (
             <div className="App">
                 {this.state.articles.map((article,index) => {
-                 return   <Card2 key={index} title={article.title} body={article.body}/>
+                 return   <Card key={index} title={article.title} body={article.body}/>
                 })}
                 {/*<Card2 title={this.state.articles[0].title} body={this.state.articles[0].body}/>*/}
                 {/*<Card2 title={this.state.articles[1].title} body={this.state.articles[1].body}/>*/}
+                <button onClick={this.loadMore}>Load More</button>
             </div>
         );
     }

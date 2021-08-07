@@ -25,8 +25,11 @@ class App extends React.Component{
     render() {
         return (
             <div className="App">
-                <Card2 title={this.state.articles[0].title} body={this.state.articles[0].body}/>
-                <Card2 title={this.state.articles[1].title} body={this.state.articles[1].body}/>
+                {this.state.articles.map(article => {
+                 return   <Card2 title={article.title} body={article.body}/>
+                })}
+                {/*<Card2 title={this.state.articles[0].title} body={this.state.articles[0].body}/>*/}
+                {/*<Card2 title={this.state.articles[1].title} body={this.state.articles[1].body}/>*/}
             </div>
         );
     }

@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import Card from './Card'
+import App from './components/App/App';
+import Card from './components/Card/Card'
 import reportWebVitals from './reportWebVitals';
 import Event from "./Event";
-import Card2 from "./Card2";
+import Card2 from "./components/Card/Card2";
 
 ReactDOM.render(<App/>, document.getElementById('root')
 );

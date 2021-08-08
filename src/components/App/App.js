@@ -1,7 +1,7 @@
-import logo from './logo.svg';
+import logo from '../../logo.svg';
 import './App.css';
-import Card from "./Card";
-import Card2 from "./Card";
+import Card from "../Card/Card";
+import Card2 from "../Card/Card";
 import React from "react";
 
 class App extends React.Component{
@@ -45,10 +45,10 @@ class App extends React.Component{
 
     render() {
         let articles = this.state.articles.map((article, index) => {
-            return <Card key={index} title={article.title} body={article.body}/>
+            return <div className="App"><Card key={index} title={article.title} body={article.body}/></div>
         })
         return (
-            <div className="App">
+            <div className='App'>
                 { articles }
                 {
                     this.state.loading

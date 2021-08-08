@@ -61,7 +61,8 @@ class App extends React.Component{
                 }
                 {/*<Card2 title={this.state.articles[0].title} body={this.state.articles[0].body}/>*/}
                 {/*<Card2 title={this.state.articles[1].title} body={this.state.articles[1].body}/>*/}
-                <button style={btnStyle}
+                <button className={`btn-more ${this.state.btnHover ? 'active' : ''}`}
+                        style={btnStyle}
                         onClick={this.loadMore}
                         onMouseEnter={(e) => console.log('Enter')}
                     >Load More</button>

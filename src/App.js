@@ -38,7 +38,6 @@ class App extends React.Component{
                         loading: false
                     }
                 })
-                this.setState({loading: false})
             }
             , 1000)
     }

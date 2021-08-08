@@ -47,6 +47,10 @@ class App extends React.Component{
         let articles = this.state.articles.map((article, index) => {
             return <div className="App"><Card key={index} title={article.title} body={article.body}/></div>
         })
+
+        const btnStyle={
+            backgroundColor:'gray'
+        }
         return (
             <div className='App'>
                 { articles }
@@ -57,7 +61,7 @@ class App extends React.Component{
                 }
                 {/*<Card2 title={this.state.articles[0].title} body={this.state.articles[0].body}/>*/}
                 {/*<Card2 title={this.state.articles[1].title} body={this.state.articles[1].body}/>*/}
-                <button onClick={this.loadMore}>Load More</button>
+                <button style={btnStyle} onClick={this.loadMore}>Load More</button>
             </div>
         );
     }
